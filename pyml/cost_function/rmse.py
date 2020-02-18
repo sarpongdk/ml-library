@@ -1,5 +1,7 @@
 from mse import MeanSquareError
 
+import math
+
 class RootMeanSquareError(MeanSquareError):
    def __init__(self):
       pass
@@ -9,10 +11,10 @@ class RootMeanSquareError(MeanSquareError):
 
    def _scoreIter(self, true, predicted, coeff = 1):
       score = super()._scoreIter(true, predicted, coeff)
-      return sqrt(score)
+      return math.sqrt(score)
 
    def _scoreScalar(self, true, predicted):
       score = super()._scoreScalar(true, predicted)
-      return sqrt(score)
+      return math.sqrt(score)
 
 
