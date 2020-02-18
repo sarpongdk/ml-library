@@ -6,18 +6,18 @@ class AbstractCostFunction(ABC):
    def __init__(self):
       pass
 
-   def score(true, predicted):
+   def score(self, true, predicted):
       try:
-         return _scoreIter(true, predicted)
+         return self._scoreIter(true, predicted)
       except TypeError:
-         return _scoreScalar(true, predicted)
+         return self._scoreScalar(true, predicted)
 
    @abstractmethod
-   def _scoreIter(true, predicted):
+   def _scoreIter(self, true, predicted):
       pass
 
    @abstractmethod
-   def _scoreScalar(true, predicted):
+   def _scoreScalar(self, true, predicted):
       pass
 
    def __str__(self):

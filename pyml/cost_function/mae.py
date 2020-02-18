@@ -1,4 +1,4 @@
-class MeanSquareError(AbstractCostFunction):
+class MeanAbsoluteError(AbstractCostFunction):
    def __init__(self):
       pass
 
@@ -15,10 +15,10 @@ class MeanSquareError(AbstractCostFunction):
       n = len(true)
       score = 0
       for i in range(n):
-         score += (true - predicted) ** 2
+         score += abs(true - predicted)
       return score/n
 
    def _scoreScalar(self, true, predicted):
-      score = (true - predicted)**2
+      score = abs(true - predicted)
 
 
