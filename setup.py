@@ -14,8 +14,8 @@ with open("requirements.txt", "r") as fr:
       requirements.append(line.strip())
 
 # setup tools
-setuptools.setup(name='jemdoc',
-      version='0.8.0',
+setuptools.setup(name='pyml',
+      version='0.0.1',
       description='A machine learning library developed for personal use. This library evolved from my desire to understand the low level details of popular machine learning models and techniques. As such it has been solely implemented in python 3'
       author='David Sarpong',
       author_email='sarpong.david2@gmail.com',
@@ -28,9 +28,6 @@ setuptools.setup(name='jemdoc',
       classifiers=[
          "Programming Language :: Python :: 3",
          "Operating System :: OS Independent"
-      ],
-      entry_points={
-         "console_scripts": ["jemdoc=jemdoc.main:main"]
-      }
+      ]
     )
 
