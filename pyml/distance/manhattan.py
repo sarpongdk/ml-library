@@ -3,7 +3,4 @@ class Manhattan(object):
       pass
 
    def getDistance(self, v1, v2):
-      try:
-
-      except:
-
+      pass
